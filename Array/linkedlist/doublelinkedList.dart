@@ -47,7 +47,7 @@ class DoublyLinkedList {
       prepend(value);
     } else {
       Node? current = head;
-      for (int i = 0; i < position - 2 && current != null; i++) {
+      for (int i = 1; i < position - 1 && current != null; i++) {
         current = current.next;
       }
 
@@ -156,7 +156,7 @@ void main() {
   myList.prepend(4);
   myList.prepend(2);
   myList.prepend(1);
-  
+
   print("Original List:");
   myList.display();
   // myList.prepend(0);

@@ -2,7 +2,7 @@ import 'dart:collection';
 
 void main() {
   List<int> sumoftwo = twOnumbersum([1, 9, 8, 4, 5, 6, 7], 10);
- // List<int>
+  // List<int>
   print(sumoftwo);
 }
 
@@ -30,4 +30,36 @@ List<int> twOnumbersum(List<int> arr, int target) {
     }
   }
   return [];
+}
+
+appendelement(List<int> arr, int val) {
+  arr.add(val);
+  return arr;
+}
+
+prepend(List<int> arr, int val) {
+  arr.insert(0, val);
+  return val;
+}
+
+removeatfirst(List<int> arr) {
+  for (int i = 0; i < arr.length - 1; i++) {
+    arr[i] = arr[i + 1];
+  }
+  arr.length = arr.length - 1;
+  return arr;
+}
+
+removefromlast(List<int> arr) {
+  arr.length = arr.length - 1;
+  return arr;
+}
+
+findindex(List<int> arr, int tar) {
+  for (int i = 0; i < arr.length - 1; i++) {
+    if (arr[i] == tar) {
+      return i;
+    }
+  }
+  return -1;
 }

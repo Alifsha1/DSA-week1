@@ -94,7 +94,7 @@ class LinkedList {
       head = removeNode!.next;
     } else {
       Node? current = head;
-      for (int i = 1; i < position - 2; i++) {
+      for (int i = 1; i < position - 1; i++) {
         if (current!.next == null) {
           print('Postion out of range');
         }
@@ -130,6 +130,25 @@ class LinkedList {
         return null;
       }
     }
+  }
+
+  findvalueanddelete(val) {
+    if (head == null) {
+      print('list is empty');
+      return;
+    }
+    Node? current = head;
+    // Node? remove;
+    while (current!.next!.next!.value != val && current.next != null) {
+      if (current.next!.next!.value == val) {
+        current.next = current.next!.next;
+        //  current.next = remove!.next!.next;
+        return val;
+      }
+      current = current.next;
+    }
+    print('not found');
+    return null;
   }
 
   // Search by value
@@ -193,7 +212,7 @@ class LinkedList {
   }
 
   // Display the elements of the list
- void printList() {
+  void printList() {
     Node? current = head;
     while (current != null) {
       stdout.write('${current.value}\t');
@@ -202,28 +221,37 @@ class LinkedList {
       }
       current = current.next;
     }
-   
   }
+
+  // void printsrecurse(){
+
+  // }
 }
 
 void main() {
   LinkedList linkedList = LinkedList();
   linkedList.prepend(2);
- // linkedList.printList();
+  // linkedList.printList();
   linkedList.prepend(1);
- // linkedList.printList();
+  // linkedList.printList();
+  linkedList.append(3);
+  linkedList.append(5);
   linkedList.append(2);
- // linkedList.printList();
-  linkedList.prepend(5);
- // linkedList.printList();
+  linkedList.append(5);
+  linkedList.append(2);
+  // linkedList.printList();
+  linkedList.prepend(2);
+  // linkedList.printList();
   linkedList.insertAtPosition(6, 3);
 
- // linkedList.printList();
+  // linkedList.printList();
   // linkedList.removeAtPostion(1);
   // linkedList.removeValue(3);
   // print(linkedList.search(11));
   // linkedList.printList();
- // linkedList.removeDuplicatesFromSortedList();
+  // linkedList.removeDuplicatesFromSortedList();
+  linkedList.printList();
+  linkedList.findvalueanddelete(5);
   linkedList.printList();
   print("\nIs List Empty: ${linkedList.isEmpty()}");
 

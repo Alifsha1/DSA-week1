@@ -1,25 +1,27 @@
 void main() {
-  List<int> appendElmnt = appendElement([3, 4, 2, 4, 1], 2);
-  List<int> prependElmnt = prependElement([3, 4, 2, 4, 1], 1);
-  List<int> removeFirst = removeFromLast([3, 4, 2, 4, 1]);
-  List<int> removeLast = removeFromFirst([3, 4, 2, 4, 1]);
-  List<int> insertIndexResult = inserAtIndex([3, 4, 2, 4, 1], 2, 10);
-  List<int> removeIndexResult = removeAtIndex([3, 4, 2, 4, 1], 2);
-  List<int> removeElementResult = removeByElement([3, 4, 2, 4, 1], 3);
-  List<int> reversedArray = reverseArray([3, 4, 2, 4, 1]);
-  List<int> sortedArray = sortArray([3, 4, 2, 4, 1]);
-  int findIndexResult = findIndex([3, 4, 2, 4, 1], 3);
+  // List<int> appendElmnt = appendElement([3, 4, 2, 4, 1], 2);
+  // List<int> prependElmnt = prependElement([3, 4, 2, 4, 1], 1);
+  // List<int> removeFirst = removeFromLast([3, 4, 2, 4, 1]);
+  // List<int> removeLast = removeFromFirst([3, 4, 2, 4, 1]);
+  // List<int> insertIndexResult = inserAtIndex([3, 4, 2, 4, 1], 2, 10);
+  // List<int> removeIndexResult = removeAtIndex([3, 4, 2, 4, 1], 2);
+  // List<int> removeElementResult = removeByElement([3, 4, 2, 4, 1], 3);
+  // List<int> reversedArray = reverseArray([3, 4, 2, 4, 1]);
+  // List<int> sortedArray = sortArray([3, 4, 2, 4, 1]);
+  // int findIndexResult = findIndex([3, 4, 2, 4, 1], 3);
+  bool ispalindrome = palindrome([1, 4, 4, 4, 4, 4, 1]);
 
-  print('Array after inserting at last: $appendElmnt');
-  print('Array after inserting in first: $prependElmnt');
-  print('Remove From First: $removeFirst');
-  print('Remove From Last: $removeLast');
-  print('Array after insertion at index: $insertIndexResult');
-  print('Array after removing at index: $removeIndexResult');
-  print('Array after removing by element: $removeElementResult');
-  print('Array after reversing: $reversedArray');
-  print('Array after sorting: $sortedArray');
-  print('Index of value 3: $findIndexResult');
+  // print('Array after inserting at last: $appendElmnt');
+  // print('Array after inserting in first: $prependElmnt');
+  // print('Remove From First: $removeFirst');
+  // print('Remove From Last: $removeLast');
+  // print('Array after insertion at index: $insertIndexResult');
+  // print('Array after removing at index: $removeIndexResult');
+  // print('Array after removing by element: $removeElementResult');
+  // print('Array after reversing: $reversedArray');
+  // print('Array after sorting: $sortedArray');
+  // print('Index of value 3: $findIndexResult');
+  print(ispalindrome);
 }
 
 List<int> appendElement(List<int> arr, int element) {
@@ -101,4 +103,24 @@ List<int> sortArray(List<int> arr) {
     }
   }
   return arr;
+}
+
+bool palindrome(List<int> arr) {
+  List<int> reversed = [];
+  int flag = 1;
+  for (int i = arr.length - 1; i >= 0; i--) {
+    reversed.add(arr[i]);
+  }
+  for (int i = 0; i < arr.length; i++) {
+    flag = 1;
+    if (arr[i] != reversed[i]) {
+      flag = 0;
+      break;
+    }
+  }
+  if (flag == 0) {
+    return false;
+  }
+
+  return true;
 }
