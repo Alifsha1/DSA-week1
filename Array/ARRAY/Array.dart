@@ -1,5 +1,3 @@
-import 'dart:collection';
-
 void main() {
   List<int> sumoftwo = twOnumbersum([1, 9, 8, 4, 5, 6, 7], 10);
   // List<int>
@@ -19,7 +17,7 @@ void main() {
 //another method--------
 
 List<int> twOnumbersum(List<int> arr, int target) {
-  HashSet<int> newset = HashSet();
+  Set<int> newset = Set();
   for (int i = 0; i < arr.length; i++) {
     int num = arr[i];
     int match = target - num;
