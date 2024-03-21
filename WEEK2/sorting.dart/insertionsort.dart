@@ -13,7 +13,7 @@ insertionsort(List<int> arr) {
 }
 
 void main() {
-  List<int> arr = [-6, 20, 8, -2, 4];
+  List<int> arr = [-8, 22, 10, -4, 6];
   List result = insertionsort(arr);
   print(result);
 }

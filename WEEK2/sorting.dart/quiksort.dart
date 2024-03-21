@@ -16,7 +16,7 @@ quiksort(List<int> arr) {
 }
 
 void main() {
-  List<int> arr = [8, 20, -2, 4, -6];
+  List<int> arr = [9, 21, -3, 5, -7];
   List result = quiksort(arr);
   print(result);
 }

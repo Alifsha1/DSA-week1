@@ -27,9 +27,9 @@ void main() {
   queue.enqueue(50);
 
   print(queue.dequeue());
-  print(queue.dequeue());
-  print(queue.dequeue());
-  print(queue.dequeue());
-  print(queue.dequeue());
-  print(queue.dequeue());
+ // print(queue.dequeue());
+  //print(queue.dequeue());
+ // print(queue.dequeue());
+ // print(queue.dequeue());
+  
 }

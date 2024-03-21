@@ -14,7 +14,7 @@ selectionsort(List<int> arr) {
 }
 
 void main() {
-  List<int> arr = [22, 40, -12, 55, -2, 1, 9];
+  List<int> arr = [22, 40, -12, 55, -3, 2, 10];
   List result = selectionsort(arr);
   print(result);
 }

@@ -15,7 +15,7 @@ bubblesort(List<int> arr) {
 }
 
 void main() {
-  List<int> arr = [20, 2, -20, 5, -2, -6, 10];
+  List<int> arr = [11, 21, -21, 7, -4, -8, 12];
   List sorted = bubblesort(arr);
   print(sorted);
 }
